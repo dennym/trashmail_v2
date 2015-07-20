@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt', '0.9.4'
+gem 'volt', '0.9.5.pre1'
 
 # volt uses mongo as the default data store.
 gem 'volt-mongo', '~> 0.1.0'
@@ -10,14 +10,7 @@ gem 'volt-mongo', '~> 0.1.0'
 gem 'volt-bootstrap', '~> 0.0.10'
 
 # Simple theme for bootstrap, remove to theme yourself.
-gem 'volt-bootstrap_jumbotron_theme', '~> 0.1.0'
-
-# User templates for login, signup, and logout menu.
-gem 'volt-user_templates', '~> 0.4.0'
-
-# Add ability to send e-mail from apps.
-gem 'volt-mailer', '~> 0.1.0'
-
+gem 'volt-bootstrap_flatui_theme', '~> 0.1.1'
 # Use rbnacl for message bus encrpytion
 # (optional, if you don't need encryption, disable in app.rb and remove)
 #

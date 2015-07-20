@@ -9,7 +9,7 @@ Volt.configure do |config|
   #######################################
   config.domain = '..com'
   config.app_name = '.'
-  config.mailer.from = '. <no-reply@..com>'
+  # config.mailer.from = '. <no-reply@..com>'
 
   ############
   # App Secret
