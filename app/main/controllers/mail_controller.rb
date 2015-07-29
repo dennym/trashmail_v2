@@ -6,7 +6,7 @@ module Main
 
     def create
 
-      data = request.body.inspect
+      data = request.body.read
       puts data
       # store._mails! << Link.new(data)
     end
