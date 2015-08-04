@@ -1,18 +1,9 @@
 module Main
-  class MailController < Volt::HttpController
-    # def index
-    #   self.model = :store
-    # end
-
-    def create
-
-      data = request.body.read
-      puts data
-      # store._mails! << Link.new(data)
+  class MailController < Volt::ModelController
+    def index
+      # set the scope to the tenant set by params
+      # self.model = store._tenants.where(name: params._name).first.then.mails
+      self.model = store._tenants.where(name: params._tenant).first
     end
-
-    # def show
-    #   self.model = store._mails.where(_id: params._id).fetch_first
-    # end
   end
 end

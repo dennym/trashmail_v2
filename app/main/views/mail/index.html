@@ -1,0 +1,9 @@
+<:Title>
+  Inbox mail#index
+
+<:Body>
+  <h1>{{ _mails.size }} </h1>
+
+  {{ _mails.each do |mail| }}
+    {{ mail.inspect }}
+  {{ end }}

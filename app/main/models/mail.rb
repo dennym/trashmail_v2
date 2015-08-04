@@ -1,8 +1,6 @@
 class Mail < Volt::Model
-  # belongs_to :user
+  belongs_to :tenant
 
-  # permissions(:index, :show, :delete) do
-  #   # Only the person who created the post can delete or update it
-  #   deny unless owner?
-  # end
+  permissions do
+  end
 end
