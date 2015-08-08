@@ -9,6 +9,10 @@ module Main
       # Add code for when the about view is loaded
     end
 
+    def do_login
+      redirect_to('/inbox/' + page._login)
+    end
+
     private
 
     # The main template contains a #template binding that shows another

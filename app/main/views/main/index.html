@@ -4,3 +4,12 @@
 <:Body>
   <h1>Home</h1>
 
+  <form e-submit="do_login">
+    <div class="form-group">
+      <label class="control-label">
+          Email
+      </label>
+      <input class="form-control" type="text" value="{{ page._login }}" autofocus />
+    </div>
+    <button class="btn btn-info btn-block">Login</button>
+  </form>

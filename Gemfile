@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt', '0.9.5.pre4'
+gem 'volt', github: 'voltrb/volt'
 
 # volt uses mongo as the default data store.
 gem 'volt-mongo', '~> 0.1.0'
@@ -11,6 +11,7 @@ gem 'volt-bootstrap', '~> 0.0.10'
 
 # Simple theme for bootstrap, remove to theme yourself.
 gem 'volt-bootstrap_flatui_theme', '~> 0.1.1'
+
 # Use rbnacl for message bus encrpytion
 # (optional, if you don't need encryption, disable in app.rb and remove)
 #

@@ -6,7 +6,7 @@ module Main
       store._tenants.create(name: tenant(request.params[:to]))
 
       store._tenants.where(name: tenant(request.params[:to])).first.then do |tenant|
-        tenant._mails.create(request.params.merge(createdAt: Time.now))
+        tenant._mails.create(request.params.merge(createdAt: Time.now).merge(unread: true))
       end
 
       render json: 200

@@ -1,3 +1,20 @@
+GIT
+  remote: git://github.com/voltrb/volt.git
+  revision: af2390ee99aa7536957805274c7871dd11fba813
+  specs:
+    volt (0.9.5.pre4)
+      bcrypt (~> 3.1.9)
+      bundler (>= 1.5)
+      concurrent-ruby (= 0.8.0)
+      configurations (~> 2.0.0.pre)
+      faye-websocket (~> 0.10.0)
+      listen (~> 3.0.1)
+      opal (~> 0.8.0)
+      pry (~> 0.10.1)
+      rack (~> 1.5.0)
+      sass (~> 3.4.15)
+      thor (~> 0.19.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -26,7 +43,7 @@ GEM
       execjs (>= 1)
     daemons (1.2.3)
     diff-lcs (1.2.5)
-    eventmachine (1.0.7)
+    eventmachine (1.0.8)
     execjs (2.5.2)
     faye-websocket (0.10.0)
       eventmachine (>= 0.12.0)
@@ -105,18 +122,6 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    volt (0.9.5.pre4)
-      bcrypt (~> 3.1.9)
-      bundler (>= 1.5)
-      concurrent-ruby (= 0.8.0)
-      configurations (~> 2.0.0.pre)
-      faye-websocket (~> 0.10.0)
-      listen (~> 3.0.1)
-      opal (~> 0.8.0)
-      pry (~> 0.10.1)
-      rack (~> 1.5.0)
-      sass (~> 3.4.15)
-      thor (~> 0.19.0)
     volt-bootstrap (0.0.10)
     volt-bootstrap_flatui_theme (0.1.1)
     volt-mongo (0.1.1)
@@ -145,7 +150,7 @@ DEPENDENCIES
   selenium-webdriver (~> 2.43.0)
   thin (~> 1.6.0)
   uglifier (>= 2.4.0)
-  volt (= 0.9.5.pre4)
+  volt!
   volt-bootstrap (~> 0.0.10)
   volt-bootstrap_flatui_theme (~> 0.1.1)
   volt-mongo (~> 0.1.0)
