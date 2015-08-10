@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/voltrb/volt.git
-  revision: af2390ee99aa7536957805274c7871dd11fba813
+  revision: 70c098bd8eeca8a84975253b1378e82c2a0f4b8c
   specs:
     volt (0.9.5.pre4)
       bcrypt (~> 3.1.9)
