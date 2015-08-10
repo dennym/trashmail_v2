@@ -1,9 +1,9 @@
 class Mail < Volt::Model
   belongs_to :tenant
 
-  before_save :add_create_time
+  before_save :add_timestamp
 
-  def add_create_time
+  def add_timestamp
     self._createdAt = Time.now
   end
 end
