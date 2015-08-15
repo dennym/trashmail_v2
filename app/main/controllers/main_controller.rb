@@ -1,12 +1,13 @@
 # By default Volt generates this controller for your Main component
 module Main
   class MainController < Volt::ModelController
+    before_action :remove_body_class
+    after_action :set_body_class
+
     def index
-      # Add code for when the index view is loaded
     end
 
     def about
-      # Add code for when the about view is loaded
     end
 
     def do_login
@@ -14,6 +15,14 @@ module Main
     end
 
     private
+
+    def remove_body_class
+      `$('body').removeClass();`
+    end
+
+    def set_body_class
+      `$('body').addClass('main ' + #{params._action});`
+    end
 
     # The main template contains a #template binding that shows another
     # template.  This is the path to that template.  It may change based

@@ -2,10 +2,10 @@
 
 post "/mail_inbound", controller: 'api', action: 'create'
 
-client '/inbox/{{ tenant }}', controller: 'mail', action: 'index'
+client '/inbox/{{ tenant_name }}', controller: 'mail', action: 'index'
 
 client '/about', action: 'about'
 
 # The main route, this should be last. It will match any params not
 # previously matched.
-client '/', {}
+client '/', action: 'index'
