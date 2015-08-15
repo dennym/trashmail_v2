@@ -14,6 +14,7 @@ module Main
     end
 
     def extend_ttl
+      self._createdAt = model._createdAt + 3600
     end
 
     private
@@ -53,7 +54,7 @@ module Main
       store._tenants.where(name: params._tenant_name).first.then do |tenant|
         tenant._mails.on('removed') do
           unread.then do |value|
-            `favicon.badge(value);`
+            value == 0 ? `favicon.reset()` : `favicon.badge(value);`
           end
         end
       end
