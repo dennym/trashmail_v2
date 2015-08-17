@@ -1,0 +1,14 @@
+<:Body>
+  <tr class="{{ if model._unread }}unread{{ end }}" e-click="selected">
+    <td>{{ model._from }}</td>
+    <td>{{ model._subject }}</td>
+    <td>{{ (model._createdAt + 3600).strftime('%l:%M %P') }}</td>
+    <td>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <a class="btn btn-primary btn-xs" e-click="delete"><span class="fui-trash"></span></a>
+          <a class="btn btn-primary btn-xs" e-click="extend_ttl"><span class="fui-time"></span></a>
+        </div>
+      </div>
+    </td>
+  </tr>

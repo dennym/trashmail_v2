@@ -13,8 +13,19 @@ module Main
     def show
     end
 
+    def selected
+      self._unread = false
+      params._mail = self._id
+    end
+
+    def delete
+      model.destroy
+      flash._successes << "Email deleted"
+    end
+
     def extend_ttl
       self._createdAt = model._createdAt + 3600
+      flash._successes << "Email extended"
     end
 
     private
@@ -44,15 +55,7 @@ module Main
       });`
 
       store._tenants.where(name: params._tenant_name).first.then do |tenant|
-        tenant._mails.on('added') do
-          unread.then do |value|
-            `favicon.badge(value);`
-          end
-        end
-      end
-
-      store._tenants.where(name: params._tenant_name).first.then do |tenant|
-        tenant._mails.on('removed') do
+        tenant._mails.on('added', 'removed') do
           unread.then do |value|
             value == 0 ? `favicon.reset()` : `favicon.badge(value);`
           end

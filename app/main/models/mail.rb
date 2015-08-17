@@ -4,7 +4,7 @@ class Mail < Volt::Model
   before_save :add_timestamp
 
   def add_timestamp
-    puts self._createdAt.nil?
+    # only add time stamp on new created mails
     self._createdAt = Time.now if self._createdAt.nil?
   end
 end
